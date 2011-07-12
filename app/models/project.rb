@@ -4,4 +4,7 @@ class Project
 
   field :title
   field :description
+
+  #associations#
+  belongs_to :owner, :class_name => "User"
 end

@@ -1,0 +1,7 @@
+%h1 New Project
+= simple_form_for @project do |f|
+  .inputs
+    = f.input :title, :required => true, :autofocus => true, :placeholder => 'Title'
+    = f.input :description, :as => :text, :required => false, :autofocus => true
+  .actions
+    = f.button :submit
