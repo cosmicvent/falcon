@@ -24,6 +24,21 @@ module Falcon
     # :all can be used as a placeholder for all plugins not explicitly named.
     # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
 
+    config.autoload_paths += %W(
+        #{config.root}/lib
+        #{config.root}/app/models/concerns
+        #{config.root}/app/controllers/concerns
+      )
+
+    config.generators do |g|
+      g.orm :mongoid
+      g.template_engine :haml
+      g.fixture_replacement :factory_girl, :dir => "spec/factories"
+    end
+    Haml::Template.options[:format] = :html5
+
+
+
     # Activate observers that should always be running.
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
 
@@ -39,7 +54,7 @@ module Falcon
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
-    config.filter_parameters += [:password]
+    config.filter_parameters += [:password, :password_confirmation]
 
     # Enable the asset pipeline
     config.assets.enabled = true
