@@ -1,4 +1,5 @@
 Falcon
 ======
 Simple and powerful bug tracking
- - An admin should be able to create a project
+ + An admin should be able to create a project
+ - A user should be able to view a project

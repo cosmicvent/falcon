@@ -14,7 +14,6 @@ class ProjectsController < ApplicationController
     @project.owner = current_user
     @project.save
 
-
     respond_with @project
   end
 
