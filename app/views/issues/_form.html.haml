@@ -1,9 +1,8 @@
-= simple_form_for(@issue) do |f|
+= simple_form_for([@project, @issue ]) do |f|
   = f.error_notification
-
   .inputs
     = f.input :title
-    = f.input :description
+    = f.input :description, :as => :text
 
   .actions
     = f.button :submit

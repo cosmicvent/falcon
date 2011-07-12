@@ -2,4 +2,4 @@
 
 %ul
   - @projects.each do |project|
-    %li= project.title
+    %li=link_to project.title, project_issues_path(project)

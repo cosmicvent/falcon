@@ -12,10 +12,10 @@
     %tr
       %td= issue.title
       %td= issue.description
-      %td= link_to 'Show', issue
-      %td= link_to 'Edit', edit_issue_path(issue)
-      %td= link_to 'Destroy', issue, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to 'Show', [@project, issue]
+      %td= link_to 'Edit', edit_project_issue_path(@project, issue)
+      %td= link_to 'Destroy', [@project, issue], :confirm => 'Are you sure?', :method => :delete
 
 %br
 
-= link_to 'New Issue', new_issue_path
+= link_to 'New Issue', new_project_issue_path(@project)

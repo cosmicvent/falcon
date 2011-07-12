@@ -3,6 +3,7 @@ class IssuesController < ApplicationController
   # GET /issues.xml
   def index
     @issues = Issue.all
+    @project = Project.find(params[:project_id])
     respond_with(@issues)
   end
 
@@ -17,6 +18,7 @@ class IssuesController < ApplicationController
   # GET /issues/new.xml
   def new
     @issue = Issue.new
+    @project = Project.find(params[:project_id])
     respond_with(@issue)
   end
 
@@ -29,6 +31,8 @@ class IssuesController < ApplicationController
   # POST /issues.xml
   def create
     @issue = Issue.new(params[:issue])
+    @issue.owner = current_user
+    @issue.project = Project.find(params[:project_id])
     @issue.save
     respond_with(@issue)
   end
