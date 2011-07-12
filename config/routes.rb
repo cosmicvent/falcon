@@ -1,4 +1,6 @@
 Falcon::Application.routes.draw do
+  resources :issues
+
   resources :projects
 
   devise_for :users
