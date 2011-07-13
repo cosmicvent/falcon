@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    -title("This is a tst")
+    -title
     %title #{ yield(:title) } - Falcon
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
@@ -17,4 +17,6 @@
       #page
         %section#issue-list
         %section#comments
+          %p=notice
+          %p=alert
           = yield

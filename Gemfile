@@ -39,6 +39,7 @@ gem 'jquery-rails'
 
 group :development do
   #gem 'ruby-debug19', :require => 'ruby-debug'
+  gem "rails-backbone"
   gem 'haml-rails'
   #gem 'foreman'
   gem 'ruby-debug19'
