@@ -8,4 +8,7 @@ class Project
   #associations#
   belongs_to :owner, :class_name => "User"
   has_many :issues
+
+  #validations#
+  validates :title, :presence => true
 end

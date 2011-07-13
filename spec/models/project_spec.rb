@@ -1,5 +1,7 @@
 require 'spec_helper'
 
 describe Project do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should validate_presence_of(:title) }
+  it { should be_referenced_in(:owner).of_type(User) }
+  it { should have_many(:issues) }
 end
