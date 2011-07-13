@@ -1,0 +1,25 @@
+/* layout stuff */
+#container{
+  width:100%;margin:0;padding:0;
+}
+header{
+  padding:0 2px;background-color:#ddd;color:#333;
+  h1{
+    float:left;
+    font-size:1.4em;
+    font-weight:normal;
+  }
+  nav{
+    float:right;
+    ul{
+      list-type:none;
+      li{
+        display:inline;
+      }
+    }
+  }
+
+}
+#page{
+  clear:both;
+}
