@@ -34,7 +34,7 @@ class IssuesController < ApplicationController
     @issue.owner = current_user
     @issue.project = Project.find(params[:project_id])
     @issue.save
-    respond_with(@issue)
+    respond_with(@issue.project, @issue)
   end
 
   # PUT /issues/1

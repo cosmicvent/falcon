@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Authentication" do
+describe "Sessions" do
   describe "SignIn" do
 
     it "should redirect to sign_in page when user is not logged in" do
