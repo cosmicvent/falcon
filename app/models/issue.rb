@@ -1,6 +1,7 @@
 class Issue
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Taggable
 
   field :title
   field :description
@@ -12,6 +13,5 @@ class Issue
   #validations#
   validates :title, :presence => true
   validates :project_id, :presence => true
-
 
 end
