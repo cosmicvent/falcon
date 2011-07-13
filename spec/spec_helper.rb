@@ -2,7 +2,12 @@ require 'rubygems'
 require 'spork'
 
 Spork.prefork do
-  # This file is copied to spec/ when you run 'rails generate rspec:install'
+  require "rails/mongoid"
+  Spork.trap_class_method(Rails::Mongoid, :load_models)
+
+  require 'factory_girl_rails'
+  Spork.trap_class_method(Factory, :find_definitions)
+
   ENV["RAILS_ENV"] ||= 'test'
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'

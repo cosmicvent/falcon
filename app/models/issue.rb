@@ -6,7 +6,7 @@ class Issue
   field :description
 
   #associations#
-  belongs_to :owner, :class => "User"
+  belongs_to :owner, :class_name => "User"
   belongs_to :project
 
   #validations#
