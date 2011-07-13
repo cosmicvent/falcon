@@ -47,6 +47,7 @@ end
 group :development, :test do
   gem 'spork', '>=0.9.0.rc8'
   gem 'rspec-rails', '~> 2.6'
+  gem 'guard'
   gem 'guard-rspec'
   gem 'guard-livereload'
   gem 'guard-spork'
@@ -62,6 +63,8 @@ group :test do
   gem 'database_cleaner'
   gem 'mongoid-rspec'
   gem 'mocha'
+
+  gem 'simplecov', :require => false
 end
 
 

@@ -194,6 +194,9 @@ GEM
     simple_form (1.4.2)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
+    simplecov (0.4.2)
+      simplecov-html (~> 0.4.4)
+    simplecov-html (0.4.5)
     spork (0.9.0.rc9)
     sprockets (2.0.0.beta.10)
       hike (~> 1.0)
@@ -231,6 +234,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   faker
+  guard
   guard-livereload
   guard-rspec
   guard-spork
@@ -251,6 +255,7 @@ DEPENDENCIES
   ruby-debug19
   sass-rails (~> 3.1.0.rc)
   simple_form
+  simplecov
   spork (>= 0.9.0.rc8)
   state_machine
   thin
