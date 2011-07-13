@@ -63,7 +63,7 @@ group :test do
   gem 'database_cleaner'
   gem 'mongoid-rspec'
   gem 'mocha'
-
+  gem 'fuubar'
   gem 'simplecov', :require => false
 end
 
