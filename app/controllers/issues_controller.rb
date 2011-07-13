@@ -17,8 +17,7 @@ class IssuesController < ApplicationController
   # GET /issues/new
   # GET /issues/new.xml
   def new
-    @issue = Issue.new
-    @project = Project.find(params[:project_id])
+    @issue = Issue.new(:project => Project.find(params[:project_id]))
     respond_with(@issue)
   end
 
@@ -42,7 +41,7 @@ class IssuesController < ApplicationController
   def update
     @issue = Issue.find(params[:id])
     @issue.update_attributes(params[:issue])
-    respond_with(@issue)
+    respond_with(@issue.project, @issue)
   end
 
   # DELETE /issues/1
@@ -50,6 +49,6 @@ class IssuesController < ApplicationController
   def destroy
     @issue = Issue.find(params[:id])
     @issue.destroy
-    respond_with(@issue)
+    respond_with(@issue.project, @issue)
   end
 end
